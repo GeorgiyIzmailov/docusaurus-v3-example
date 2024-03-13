@@ -54,6 +54,19 @@ const config: Config = {
     ],
   ],
 
+  scripts: [
+    {
+      src: "https://unpkg.com/@inkeep/widgets-embed@0.2.266/dist/embed.js",
+      type: "module",
+      defer: true,
+    },
+    { 
+      src: "/js/addInkeep.js",
+      type: "module",
+      defer: true,
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -71,6 +84,10 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'search',
+          position: 'right',
+        },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',

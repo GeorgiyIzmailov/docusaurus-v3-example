@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { useEffect } from 'react';
 
 type FeatureItem = {
   title: string;
@@ -56,6 +57,14 @@ function Feature({title, Svg, description}: FeatureItem) {
 }
 
 export default function HomepageFeatures(): JSX.Element {
+  useEffect(() => {
+    globalThis.Inkeep.embedChatButton({
+      baseSettings: {
+        organizationDisplayName: "Docusaurus",
+      },
+    });
+  }, []);
+
   return (
     <section className={styles.features}>
       <div className="container">
